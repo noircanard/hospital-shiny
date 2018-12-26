@@ -24,9 +24,11 @@ df$sector_col[df$Sector == "Public"] <- "grey"
 server <- function(input, output) {
   
 ## create a reactive value to hold postion value ###
+  
   data_of_click <- reactiveValues(clickedMarker=NULL)
   
 ## Main leaflet map for which the hospital is to be selected from ###
+  
   output$map <- renderLeaflet({
     
     
